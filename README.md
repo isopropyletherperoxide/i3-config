@@ -1,7 +1,10 @@
 # i3-config
 Config for an i3-gaps setup
 
-Dependencies: 
+### Installation
+Install the dependencies, put the contents of the config folder into /home/.config
+
+### Dependencies: 
 - i3-gaps
 - pasystray
 - nm-applet
@@ -13,3 +16,4 @@ Dependencies:
 
 ### Wallpaper
 To change the wallpaper, put it in .config/Wallpapers/Wallpaper.jpg.
+
