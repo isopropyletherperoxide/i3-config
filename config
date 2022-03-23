@@ -1,10 +1,7 @@
 # install: 
-# pasystray klipper feh picom spectacle rofi polkit-gnome 
+# pasystray klipper feh picom spectacle rofi polkit-gnome spectacle
 
-# i3 config file (v4)
-#
-# Please see https://i3wm.org/docs/userguide.html for a complete reference!
-
+# I love Girls
 set $mod Mod1
 
 # Font for window titles. Will also be used by the bar unless a different font
@@ -13,22 +10,14 @@ font pango:Hack 8.5
 
 # This font is widely installed, provides lots of unicode glyphs, right-to-left
 # text rendering and scalability on retina/hidpi displays (thanks to pango).
-# font pango:DejaVu Sans Mono 9.5
 
-# The combination of xss-lock, nm-applet and pactl is a popular choice, so
-# they are included here as an example. Modify as you see fit.
-
-# xss-lock grabs a logind suspend inhibit lock and will use i3lock to lock the
-# screen before suspend. Use loginctl lock-session to lock your screen.
 exec --no-startup-id xss-lock --transfer-sleep-lock -- i3lock --nofork
 exec_always --no-startup-id "setxkbmap -model pc104 -layout us,ru,ua -variant ,, -option grp:lwin_toggle"
-# NetworkManager is the most popular way to manage wireless networks on Linux,
-# and nm-applet is a desktop environment-independent system tray GUI for it.
 exec --no-startup-id /usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1 
 exec --no-startup-id pasystray
 exec --no-startup-id nm-applet 
 exec --no-startup-id klipper
-exec --no-startup-id feh --bg-scale .config/Wallpapers/venezuela.jpg
+exec --no-startup-id feh --bg-scale .config/Wallpapers/wallpaper.jpg
 exec --no-startup-id picom --config=.config/picom/picom.conf
 # Use pactl to adjust volume in PulseAudio.
 set $refresh_i3status killall -SIGUSR1 i3status
@@ -47,13 +36,8 @@ bindsym $mod+Shift+D exec thunar
 # kill focused window
 bindsym $mod+Shift+q kill
 
-# start dmenu (a program launcher)
-#bindsym $mod+d exec --no-startup-id dmenu_run -fn Roboto
-# A more modern dmenu replacement is rofi:
+# rofi startup
 bindsym $mod+d exec "rofi -modi drun,run -show drun"
-# There also is i3-dmenu-desktop which only displays applications shipping a
-# .desktop file. It is a wrapper around dmenu, so you need that installed.
-# bindcode $mod+40 exec --no-startup-id i3-dmenu-desktop
 
 # change focus
 bindsym $mod+j focus left
