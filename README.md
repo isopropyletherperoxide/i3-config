@@ -6,6 +6,7 @@ Install the dependencies, put the contents of the config folder into /home/.conf
 
 ### Dependencies: 
 - i3-gaps
+- i3status
 - pasystray
 - nm-applet
 - feh
